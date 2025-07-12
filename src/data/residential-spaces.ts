@@ -27,7 +27,7 @@ export interface ResidentialSpace {
   location: string;
   price: string;
   type: string;
-  status: 'new-launch' | 'rera-approved' | 'ready-to-move' | 'prime-location' | 'luxury' | 'premium';
+  status: 'new-launch' | 'rera-approved' | 'ready-to-move' | 'prime-location';
   image: string;
   bhk: string;
 }
