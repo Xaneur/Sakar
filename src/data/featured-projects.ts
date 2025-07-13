@@ -39,6 +39,11 @@ export interface Project {
   status: 'new-launch' | 'rera-approved' | 'ready-to-move';
   image: StaticImageData | string;
   bhk: string;
+  developer?: string;
+  possession?: string;
+  amenities?: string[];
+  description?: string;
+  reraId?: string;
 }
 
 /**

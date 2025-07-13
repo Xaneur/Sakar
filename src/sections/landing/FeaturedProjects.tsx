@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { featuredProjects } from '@/data/featured-projects';
 
@@ -41,7 +42,10 @@ const ProjectCard = ({ project }: { project: typeof featuredProjects[0] }) => {
   const status = statusConfig[project.status];
   
   return (
-    <div className="flex-none w-[420px] h-[308px] bg-[#0A0A0A] rounded-lg shadow-lg overflow-hidden flex flex-col">
+    <Link 
+      href={`/projects/${project.id}`}
+      className="flex-none w-[420px] h-[308px] bg-[#0A0A0A] rounded-lg shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300"
+    >
       {/* Image Container */}
       <div className="relative w-full h-[180px] bg-gray-800">
         {project.image && (
@@ -86,7 +90,7 @@ const ProjectCard = ({ project }: { project: typeof featuredProjects[0] }) => {
           {project.type}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
