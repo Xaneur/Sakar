@@ -26,10 +26,10 @@ import { residentialSpaces } from '@/data/residential-spaces';
  */
 const ResidentialSpaces = () => {
   return (
-    <section className="w-full bg-[#1A1A1A] py-10 px-16">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-medium text-white font-['Bricolage_Grotesque'] tracking-wide">
+    <section className="w-full bg-[#1A1A1A] py-12 sm:py-16">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-medium text-white font-['Bricolage_Grotesque'] tracking-wide">
             Residential Spaces
           </h2>
           <button 
@@ -40,20 +40,19 @@ const ResidentialSpaces = () => {
           </button>
         </div>
         
-        <div className="relative w-full overflow-hidden">
+        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8">
           <div 
-            className="flex space-x-6 overflow-x-auto pb-6 px-16 -mx-16" 
+            className="flex space-x-4 sm:space-x-6 overflow-x-auto pb-6 px-4 sm:px-6 lg:px-8" 
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
-              paddingRight: 'calc(112px + 4rem)',
             }}
           >
             {residentialSpaces.map((space) => (
               <ProjectCard 
                 key={space.id} 
                 project={space} 
-                className="w-[360px] h-[280px]"
+                className=""
                 tagPosition="bottom"
               />
             ))}
@@ -61,9 +60,9 @@ const ResidentialSpaces = () => {
           
           {/* Gradient overlay for the right side */}
           <div 
-            className="absolute right-0 top-0 bottom-0 w-32 pointer-events-none"
+            className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 lg:w-32 pointer-events-none"
             style={{
-              background: 'linear-gradient(270deg, #1A1A1A 0%, rgba(26, 26, 26, 0) 100%)',
+              background: 'linear-gradient(to left, #1A1A1A, rgba(26, 26, 26, 0))',
             }}
           />
         </div>

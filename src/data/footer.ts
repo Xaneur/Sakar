@@ -54,11 +54,11 @@ export const footerData: FooterData = {
   quickLinks: [
     { label: 'Home', href: '#' },
     { label: 'Properties', href: '#' },
-    { label: 'About Us', href: '#' },
-    { label: 'Services', href: '#' },
+    // { label: 'About Us', href: '#' },
+    // { label: 'Services', href: '#' },
     { label: 'Contact Us', href: '#' },
     { label: 'Blog', href: '#' },
-    { label: 'Careers', href: '#' },
+    // { label: 'Careers', href: '#' },
   ] as LinkItem[],
   
   contactInfo: [

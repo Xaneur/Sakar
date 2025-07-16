@@ -4,7 +4,7 @@ import Image from 'next/image';
 const FeaturedDevelopment = () => {
   return (
     <section className="w-full bg-black px-16 py-20">
-      <div className="max-w-[1440px] mx-auto flex flex-col gap-6">
+      <div className=" mx-auto flex flex-col gap-6">
         {/* Header */}
         <div className="flex flex-col gap-2 w-full">
           <h2 className="text-2xl font-medium text-white font-['Bricolage_Grotesque']">

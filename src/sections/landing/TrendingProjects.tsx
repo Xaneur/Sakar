@@ -38,16 +38,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, location, image, r
 
 const TrendingProjects: React.FC = () => {
   return (
-    <section className="w-full bg-[#1A1A1A] py-20 px-16">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold text-white">Top 10 Trending Projects This Week</h2>
+    <section className="w-full bg-[#1A1A1A] py-12 sm:py-16 lg:py-20">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-0">Top 10 Trending Projects This Week</h2>
           <Link href="/projects/trending" className="text-red-500 hover:underline">
             See All
           </Link>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
           {trendingProjects.map((project: TrendingProject) => (
             <ProjectCard key={project.id} {...project} />
           ))}

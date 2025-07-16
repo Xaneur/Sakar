@@ -10,7 +10,7 @@ const ProjectGallery = () => {
 
   return (
     <section className="w-full bg-black">
-      <div className="max-w-[1440px] mx-auto px-16 py-20">
+      <div className=" mx-auto px-16 py-20">
         <div className="flex flex-col gap-8 w-full">
           {/* Header */}
           <div className="flex justify-between items-center w-full relative z-10">

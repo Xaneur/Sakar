@@ -44,10 +44,10 @@ const ProjectCard = ({ project }: { project: typeof featuredProjects[0] }) => {
   return (
     <Link 
       href={`/projects/${project.id}`}
-      className="flex-none w-[420px] h-[308px] bg-[#0A0A0A] rounded-lg shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300"
+      className="flex-none w-[300px] sm:w-[360px] lg:w-[420px] bg-[#0A0A0A] rounded-lg shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300"
     >
       {/* Image Container */}
-      <div className="relative w-full h-[180px] bg-gray-800">
+      <div className="relative w-full h-[160px] sm:h-[180px] bg-gray-800">
         {project.image && (
           <Image
             src={project.image}
@@ -67,8 +67,8 @@ const ProjectCard = ({ project }: { project: typeof featuredProjects[0] }) => {
       </div>
       
       {/* Details Container */}
-      <div className="p-5 flex-1 flex flex-col">
-        <h3 className="text-white text-lg font-medium leading-7 tracking-wide">
+      <div className="p-4 sm:p-5 flex-1 flex flex-col">
+        <h3 className="text-white text-base sm:text-lg font-medium leading-snug sm:leading-7 tracking-wide">
           {project.title}
         </h3>
         
@@ -115,10 +115,10 @@ const ProjectCard = ({ project }: { project: typeof featuredProjects[0] }) => {
  */
 const FeaturedProjects = () => {
   return (
-    <section className="w-full bg-[#1A1A1A] py-10 px-16">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-medium text-white font-['Bricolage_Grotesque'] tracking-wide">
+    <section className="w-full bg-[#1A1A1A] py-12 sm:py-16">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-medium text-white font-['Bricolage_Grotesque'] tracking-wide">
             Featured Projects
           </h2>
           <button 
@@ -129,12 +129,11 @@ const FeaturedProjects = () => {
           </button>
         </div>
         
-        <div className="relative w-full overflow-hidden">
-          <div className="flex space-x-6 overflow-x-auto pb-6 px-16 -mx-16" 
+        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8">
+          <div className="flex space-x-4 sm:space-x-6 overflow-x-auto pb-6 px-4 sm:px-6 lg:px-8" 
                style={{
                  scrollbarWidth: 'none',
                  msOverflowStyle: 'none',
-                 paddingRight: 'calc(112px + 4rem)', // Account for gradient width + container padding
                }}>
             {featuredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
@@ -143,9 +142,9 @@ const FeaturedProjects = () => {
           
           {/* Gradient overlay for the right side */}
           <div 
-            className="absolute right-0 top-0 bottom-0 w-32 pointer-events-none"
+            className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 lg:w-32 pointer-events-none"
             style={{
-              background: 'linear-gradient(270deg, #1A1A1A 0%, rgba(26, 26, 26, 0) 100%)',
+              background: 'linear-gradient(to left, #1A1A1A, rgba(26, 26, 26, 0))',
             }}
           />
         </div>

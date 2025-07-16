@@ -104,9 +104,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const status = statusConfig[project.status] || statusConfig['new-launch'];
   
   return (
-    <div className={`flex-none w-[360px] h-[280px] bg-[#0A0A0A] rounded-lg shadow-lg overflow-hidden flex flex-col ${className}`}>
+    <div className={`flex-none w-[300px] sm:w-[360px] bg-[#0A0A0A] rounded-lg shadow-lg overflow-hidden flex flex-col ${className}`}>
       {/* Image Container */}
-      <div className="relative w-full h-[160px] bg-gray-800">
+      <div className="relative w-full h-[150px] sm:h-[160px] bg-gray-800">
         {project.image && (
           <Image
             src={project.image}
@@ -126,26 +126,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       
       {/* Details Container */}
-      <div className="p-4 flex-1 flex flex-col">
-        <h3 className="text-white text-lg font-medium leading-7">
+      <div className="p-3 sm:p-4 flex-1 flex flex-col">
+        <h3 className="text-white text-base sm:text-lg font-medium leading-snug sm:leading-7">
           {project.title}
         </h3>
         
-        <div className="flex items-center mt-1 text-[#E0E0E0] text-sm">
+        <div className="flex items-center mt-1 text-[#E0E0E0] text-xs sm:text-sm">
           <FaMapMarkerAlt className="w-4 h-4 text-[#9CA3AF] mr-1" />
           <span>{project.location}</span>
         </div>
         
-        <div className="mt-2 flex items-center justify-between">
-          <span className="text-sm bg-white/10 text-white px-2 py-1 rounded-md">
+        <div className="mt-2 flex items-center justify-between text-xs sm:text-sm">
+          <span className="bg-white/10 text-white px-2 py-1 rounded-md">
             {project.price}
           </span>
-          <span className="text-sm text-[#E0E0E0]">
+          <span className="text-[#E0E0E0]">
             {project.bhk}
           </span>
         </div>
         
-        <div className="mt-2 text-sm text-[#E0E0E0]">
+        <div className="mt-2 text-xs sm:text-sm text-[#E0E0E0]">
           {project.type}
         </div>
       </div>

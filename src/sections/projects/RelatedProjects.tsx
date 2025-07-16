@@ -132,7 +132,7 @@ const RelatedProjects = () => {
 
   return (
     <section className="w-full bg-[#0A0A0A] py-20 px-16">
-      <div className="max-w-[1440px] mx-auto">
+      <div className=" mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h2 className={`${bricolage.className} text-2xl font-medium text-white`}>
             Other Projects of The Stolen Group

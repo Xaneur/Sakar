@@ -70,12 +70,13 @@ const Footer = () => {
   const { logo, description, socialLinks, quickLinks, contactInfo, copyright, legalLinks } = footerData;
 
   return (
-    <footer className="flex flex-col items-center py-[100px] bg-[#0A0A0A] w-full">
-      <div className="flex flex-col w-[1280px] max-w-[1280px] gap-14 px-4">
+    <footer className="flex flex-col items-center py-16 md:py-24 bg-[#0A0A0A] w-full">
+      <div className="flex flex-col w-full max-w-[1280px] gap-12 px-4 sm:px-6 lg:px-8">
         {/* Top Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start w-full gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-10 lg:gap-8">
           {/* Left Column - Logo and Description */}
-          <div className="flex flex-col gap-6 w-full md:w-[288px]">
+          {/* Left Column - Logo and Description */}
+          <div className="flex flex-col gap-6 w-full lg:w-[288px]">
             <div className="w-[162.67px] h-[60px] relative">
               <Image 
                 src={logo.src} 
@@ -110,7 +111,7 @@ const Footer = () => {
           </div>
 
           {/* Middle Column - Quick Links */}
-          <div className="flex flex-col gap-4 w-full md:w-[232px]">
+          <div className="flex flex-col gap-4 w-full sm:w-auto">
             <h3 className="font-['Bricolage_Grotesque'] font-semibold text-lg leading-7 text-white tracking-[0.02em]">
               Quick Links
             </h3>
@@ -129,7 +130,7 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Contact Info */}
-          <div className="flex flex-col gap-4 w-full md:w-[284px]">
+          <div className="flex flex-col gap-4 w-full sm:w-auto">
             <h3 className="font-['Bricolage_Grotesque'] font-semibold text-lg leading-7 text-white tracking-[0.02em]">
               Contact Us
             </h3>
@@ -152,15 +153,19 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section - Copyright */}
-        <div className="pt-[33px] border-t border-[#323232] w-full">
-          <p className="font-['Bricolage_Grotesque'] font-extralight text-base leading-6 text-[#9CA3AF] text-center">
-            {copyright} | {legalLinks.map((link, index) => (
-              <Fragment key={index}>
-                {index > 0 && ' | '}
-                <a href={link.href} className="hover:underline">{link.label}</a>
-              </Fragment>
-            ))}
-          </p>
+        <div className="pt-8 border-t border-[#323232] w-full">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4">
+            <p className="font-['Bricolage_Grotesque'] font-extralight text-sm leading-6 text-[#9CA3AF] text-center sm:text-left">
+              {copyright}
+            </p>
+            <div className="flex gap-x-4 sm:gap-x-6">
+              {legalLinks.map((link, index) => (
+                <a key={index} href={link.href} className="font-['Bricolage_Grotesque'] font-extralight text-sm leading-6 text-[#9CA3AF] hover:underline">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>

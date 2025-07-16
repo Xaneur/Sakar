@@ -50,7 +50,7 @@ const Hero = () => {
   } = heroData;
 
   return (
-    <section className="relative w-full h-[720px]">
+    <section className="relative w-full h-auto min-h-[667px] md:min-h-0 md:h-[720px]">
       {/* Background Image with Gradient Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -62,12 +62,12 @@ const Hero = () => {
         }}
       />
       
-      <div className="relative z-10 flex flex-col justify-between h-full px-4 md:px-8 lg:px-16 pt-20 md:pt-32 pb-8 md:pb-16">
+      <div className="relative z-10 flex flex-col justify-center md:justify-between h-full px-4 sm:px-6 lg:px-8 pt-28 md:pt-32 pb-12 md:pb-16">
         {/* Main Content */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 text-center md:text-left">
           {/* Top Project Badge */}
           {badge && (
-            <div className="flex items-center justify-center w-fit bg-[#E50914] rounded-full px-4 py-1">
+            <div className="flex items-center justify-center md:justify-start w-fit bg-[#E50914] rounded-full px-4 py-1 mx-auto md:mx-0">
               <span className="text-white text-xs font-semibold leading-5">
                 {badge}
               </span>
@@ -75,7 +75,7 @@ const Hero = () => {
           )}
 
           {/* Main Heading */}
-          <h1 className="text-white text-4xl md:text-5xl lg:text-[60px] font-semibold leading-[1.1] md:leading-[60px] font-['General_Sans'] w-full md:w-3/4">
+          <h1 className="text-white text-4xl sm:text-5xl lg:text-[60px] font-semibold leading-tight sm:leading-[1.1] font-['General_Sans'] w-full max-w-4xl mx-auto md:mx-0 md:w-3/4">
             {title.split('\n').map((line, i) => (
               <React.Fragment key={i}>
                 {line}
@@ -85,7 +85,7 @@ const Hero = () => {
           </h1>
 
           {/* Info Chips */}
-          <div className="flex flex-wrap items-center gap-4 md:gap-6 mt-4">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-6 mt-4">
             {infoChips.map((chip, index) => (
               <div key={index} className="flex items-center gap-2">
                 {getInfoIcon(chip.icon)}
@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-3 md:gap-4 mt-6">
+          <div className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4 mt-6">
             {ctaButtons.map((button, index) => (
               <button
                 key={index}
@@ -114,10 +114,10 @@ const Hero = () => {
         </div>
 
         {/* Search Filters */}
-        <div className="w-full max-w-[1312px] mx-auto mt-8 md:mt-0">
-          <div className="flex flex-wrap gap-3 md:gap-4">
+        <div className="w-full max-w-screen-lg mx-auto mt-10 md:mt-0">
+          <div className="flex flex-col md:flex-row md:flex-wrap gap-3 md:gap-4">
             {searchFilters.map((filter) => (
-              <div key={filter.id} className="relative flex-1 min-w-[200px]">
+              <div key={filter.id} className="relative w-full md:flex-1 md:min-w-[180px]">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   {getInfoIcon(filter.icon)}
                 </div>
@@ -149,7 +149,7 @@ const Hero = () => {
             ))}
 
             {/* Search Button */}
-            <button className="flex items-center justify-center gap-2 px-4 md:px-6 py-3 text-white rounded-lg bg-[#E50914] font-['Bricolage_Grotesque'] text-sm font-medium leading-5 whitespace-nowrap">
+            <button className="w-full md:w-auto flex items-center justify-center gap-2 h-12 px-6 py-3 text-white rounded-lg bg-[#E50914] font-['Bricolage_Grotesque'] text-sm font-medium leading-5 whitespace-nowrap">
               <FaSearch className="w-4 h-4" />
               Search
             </button>

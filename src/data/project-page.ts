@@ -16,9 +16,9 @@ export const projectPageContent = {
 export const projectHeroStyles = {
   container: 'relative h-[600px] md:h-[720px] w-full',
   background: 'absolute inset-0',
-  contentContainer: 'relative z-10 h-full flex items-center',
-  contentWrapper: 'w-full px-4 md:px-16',
-  glassCard: 'w-[40%] bg-black/30 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-white/10 shadow-2xl',
+  contentContainer: 'relative z-10 h-full flex items-center justify-center',
+  contentWrapper: 'w-full',
+  glassCard: 'p-6 md:p-8 max-w-4xl mx-4',
   statusBadge: 'bg-[#E50914] text-white text-sm font-medium px-3 py-1 rounded-full inline-flex items-center mb-6',
   title: 'text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1] break-words',
   metaContainer: 'flex flex-wrap items-center text-white/90 gap-4 md:gap-8 mb-8',
